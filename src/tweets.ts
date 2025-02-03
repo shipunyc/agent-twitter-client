@@ -154,6 +154,17 @@ export interface PollOption {
   votes?: number;
 }
 
+export interface TweetAuthor {
+  userName?: string,
+  isVerified?: boolean,
+  isBlueVerified?: boolean,
+  name?: string,
+  id?: string,
+  followers?: number,
+  following?: number,
+  profile_image_url_https?: string
+}
+
 /**
  * A parsed Tweet object.
  */
@@ -195,6 +206,7 @@ export interface Tweet {
   views?: number;
   sensitiveContent?: boolean;
   poll?: PollV2 | null;
+  author?: TweetAuthor | null;
 }
 
 export interface Retweeter {
