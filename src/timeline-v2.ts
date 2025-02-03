@@ -172,6 +172,16 @@ export function parseLegacyTweet(
     isRetweet: false,
     isPin: false,
     sensitiveContent: false,
+    author: {
+      userName: user.screen_name,
+      isVerified: user.verified,
+      isBlueVerified: false,
+      name: user.name,
+      id: tweet.user_id_str,
+      followers: user.followers_count,
+      following: user.friends_count,
+      profile_image_url_https: user.profile_image_url_https
+    }
   };
 
   if (tweet.created_at) {
