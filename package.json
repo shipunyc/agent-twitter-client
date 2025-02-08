@@ -24,11 +24,9 @@
     "docs:generate": "typedoc --options typedoc.json",
     "docs:deploy": "npm run docs:generate && gh-pages -d docs",
     "format": "prettier --write src/**/*.ts",
-    "test": "jest",
-    "postinstall": "npm rebuild @roamhq/wrtc && npm install @roamhq/wrtc --build-from-source && ls -R ./node_modules/@roamhq/"
+    "test": "jest"
   },
   "dependencies": {
-    "@roamhq/wrtc": "^0.8.0",
     "@sinclair/typebox": "^0.32.20",
     "headers-polyfill": "^3.1.2",
     "json-stable-stringify": "^1.0.2",
